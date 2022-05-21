@@ -1,18 +1,19 @@
 //The function below is to generate one of the three choices available (ie. rock, paper, or scissors) and storing it in a variable to identify what the computer will choose
 
 function computerPlay() {
-    let computerChoice = Math.floor(Math.random() * 100); //Provides a random number
-    if(computerChoice <= 33) { //If number is less than a third of 100, provide rock
+    let computerChoice = Math.floor(Math.random() * 100);
+    if(computerChoice <= 33) { 
         return 'rock';
-    }else if(computerChoice <= 66) { //If number is less than two-thirds, provide scissors
+    }else if(computerChoice <= 66) { 
         return 'scissors';
     }else {
-        return 'paper'; //If number is above 66, provide paper
+        return 'paper'; 
     }
 };
 
-function playRockPaperScissors(playerSelection, computerSelection) {
-    //If statement to compare the selections and indicate the winners
+const computerSelection = computerPlay()
+
+function playRound(playerSelection, computerSelection) {
 
     if(playerSelection === 'rock' && computerSelection === 'paper') {
         return "You Lose! Paper beats Rock"
@@ -20,16 +21,50 @@ function playRockPaperScissors(playerSelection, computerSelection) {
         return "You Win! Rock beats Scissors"
     }else if(playerSelection === 'paper' && computerSelection === 'scissors') {
         return "You lose! Scissors beats Paper"
+    }else if(!playerSelection || !computerSelection) {
+        return "Error"
     }else {
-        return "It's a tie"
+        return "It's a tie!"
     }
 }
 
-function game() {
 
-    for(let i = 0; i < 5; i++) {
-        let playerSelection = prompt('Enter a choice of rock, paper, or scissors to play').toLowerCase();
-        let computerSelection = computerPlay();
-        console.log(playRockPaperScissors(playerSelection, computerSelection));
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function playGame() {
+
+//     for(let i = 0; i < 5; i++) {
+//         let playerSelection = prompt('Enter a choice of rock, paper, or scissors to play').toLowerCase();
+//         let computerSelection = computerPlay();
+//         console.log(playRockPaperScissors(playerSelection, computerSelection));
+//     }
+// }
