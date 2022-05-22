@@ -11,22 +11,37 @@ function computerPlay() {
     }
 };
 
-const computerSelection = computerPlay()
+
 
 function playRound(playerSelection, computerSelection) {
 
     if(playerSelection === 'rock' && computerSelection === 'paper') {
+        console.log("You Lose! Paper beats Rock");
         return "You Lose! Paper beats Rock"
     }else if(playerSelection === 'rock' && computerSelection === 'scissors') {
+        console.log("You Win! Rock beats Scissors");
         return "You Win! Rock beats Scissors"
     }else if(playerSelection === 'paper' && computerSelection === 'scissors') {
+        console.log("You lose! Scissors beats Paper");
         return "You lose! Scissors beats Paper"
-    }else if(!playerSelection || !computerSelection) {
-        return "Error"
-    }else {
-        return "It's a tie!"
+    }else if(playerSelection === computerSelection) {
+        console.log("It's a tie")
+        return "It's a tie"
     }
 }
+
+function buttonPlay(e) {
+    let playerSelection = e.srcElement.value;
+    let computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+}
+
+const buttons = document.getElementsByClassName('btn');
+for (button of buttons) {
+    button.addEventListener('click', buttonPlay)
+}
+
+
 
 
 
