@@ -1,3 +1,5 @@
+
+//Function to randomly generate computer selection
 function computerPlay() {
     let randomNum = Math.ceil(Math.random() * 3);
     if(randomNum < 2) {
@@ -9,19 +11,57 @@ function computerPlay() {
     }
 }
 
+
+//Function to generate whether you win or lose and print out the corresponding string
 function playRound(playerSelection, computerSelection) {
     playerSelection.toLowerCase();
     
     if((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors')) {
-        return `You Lose! Computer chose ${computerSelection} which beats ${playerSelection}`;
+        console.log(`You Lose! Computer chose ${computerSelection} which beats ${playerSelection}`)
+        return `You Lose! You chose ${playerSelection} which loses to ${computerSelection}`;
     }else if((playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+        console.log(`You Win! You chose ${playerSelection} which beats ${computerSelection}`)
         return `You Win! You chose ${playerSelection} which beats ${computerSelection}`;
     }else if(playerSelection === computerSelection) {
+        console.log('It\'s a tie')
         return 'It\'s a tie'
     }else {
         return 'eRrOr'
     }
 }
+
+
+let buttons = document.querySelectorAll('.btn')
+buttons.forEach(el => el.addEventListener('click', playOnClick));
+
+
+//Function to assign values to playerSelection through button click, computer selection through computerPlay() and to play the game using those values using playround()
+function playOnClick() {
+    let playerSelection = document.querySelector('.btn').value;
+    console.log(playerSelection);
+    let computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function game() {
     
