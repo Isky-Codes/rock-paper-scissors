@@ -31,10 +31,10 @@ function playRound(playerSelection, computerSelection) {
     document.querySelector('.computerScore p').innerText = computerScore;
 
     if(playerScore === 5) {
-        document.querySelector('.declareWinner').innerText = 'You win!';
+        document.querySelector('.playResult').innerText = 'You win!';
         return 'You win!';
     }else if(computerScore === 5) {
-        document.querySelector('.declareWinner').innerText = 'Computer wins!';
+        document.querySelector('.playResult').innerText = 'Computer wins!';
         return 'Computer wins!';
     }
 }
@@ -47,8 +47,30 @@ buttons.forEach(el => el.addEventListener('click', playOnClick));
 //Function to assign values to playerSelection through button click, computer selection through computerPlay() and to play the game using those values using playround()
 function playOnClick(event) {
     let playerSelection = event.target.value;
-    console.log(playerSelection);
     let computerSelection = computerPlay();
+    
+    if(playerSelection === 'rock') {
+        document.querySelector('.playerSelectionImage').src = 'images/rock.png';
+        document.querySelector('.playerSelectionImage').style.visibility = 'visible';
+    }else if(playerSelection === 'paper') {
+        document.querySelector('.playerSelectionImage').src = 'images/paper.png';
+        document.querySelector('.playerSelectionImage').style.visibility = 'visible';
+    }else if(playerSelection === 'scissors') {
+        document.querySelector('.playerSelectionImage').src = 'images/scissors.png'; 
+        document.querySelector('.playerSelectionImage').style.visibility = 'visible';
+    }
+
+    if(computerSelection === 'rock') {
+        document.querySelector('.computerSelectionImage').src = 'images/rock.png';
+        document.querySelector('.computerSelectionImage').style.visibility = 'visible';
+    }else if(computerSelection === 'paper') {
+        document.querySelector('.computerSelectionImage').src = 'images/paper.png';
+        document.querySelector('.computerSelectionImage').style.visibility = 'visible';
+    }else if(computerSelection === 'scissors') {
+        document.querySelector('.computerSelectionImage').src = 'images/scissors.png'; 
+        document.querySelector('.computerSelectionImage').style.visibility = 'visible';
+    }
+
     playRound(playerSelection, computerSelection);
 }
 

@@ -28,15 +28,15 @@ body h1 {
 }
 
 .playerSelectionImage {
-    border: 2px dotted white;
     width: 40%;
     height: 30em;
+    visibility: hidden;
 }
 
 .computerSelectionImage {
-    border: 2px dotted white;
     width: 40%;
     height: 30em;
+    visibility: hidden;
 }
 
 .buttonContainer {
@@ -58,7 +58,6 @@ body h1 {
 }
 
 .resultsContainer {
-    border: 1px solid white;
     margin: 0 auto;
     margin-top: 1em;
     width: 43.8%;
@@ -69,16 +68,30 @@ body h1 {
 }
 
 .scoreContainer {
-    border: 1px solid white;
     width: 20%;
     height: 10em;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
 .playResult {
     width: 100%;
     text-align: center;
+    font-size: 3em;
+}
+
+.scoreContainer p {
     font-size: 2em;
+    margin-top: -0.1em;
+}
+
+.playerSelectionImage {
+    width: 35%;
+    height: 30em;
+}
+
+.computerSelectionImage {
+    width: 35%;
+    height: 30em;
 }
