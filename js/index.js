@@ -18,15 +18,24 @@ function playRound(playerSelection, computerSelection) {
     
     if((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors')) {
         document.querySelector('.playResult').innerText = `You Lose! Computer chose ${computerSelection} which beats ${playerSelection}`;
-        return `You Lose! You chose ${playerSelection} which loses to ${computerSelection}`;
+        computerScore++;
     }else if((playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
         document.querySelector('.playResult').innerText = `You Win! You chose ${playerSelection} which beats ${computerSelection}`;
-        return `You Win! You chose ${playerSelection} which beats ${computerSelection}`;
+        playerScore++;
     }else if(playerSelection === computerSelection) {
         document.querySelector('.playResult').innerText = 'It\'s a tie';
-        return 'It\'s a tie';
     }else {
-        return 'eRrOr';
+        document.querySelector('.playResult').innerText = 'eRrOr';
+    }
+    document.querySelector('.playerScore p').innerText = playerScore;
+    document.querySelector('.computerScore p').innerText = computerScore;
+
+    if(playerScore === 5) {
+        document.querySelector('.declareWinner').innerText = 'You win!';
+        return 'You win!';
+    }else if(computerScore === 5) {
+        document.querySelector('.declareWinner').innerText = 'Computer wins!';
+        return 'Computer wins!';
     }
 }
 
@@ -42,6 +51,11 @@ function playOnClick(event) {
     let computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
 }
+
+//Player Score Counter
+let playerScore = 0;
+let computerScore = 0;
+
 
 
 

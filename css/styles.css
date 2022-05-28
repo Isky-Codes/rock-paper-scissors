@@ -1,0 +1,84 @@
+* {
+    color: white;
+}
+body {
+    background-color: black;
+}
+
+body h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.imagesContainer {
+    border: 2px solid white;
+    width: 60%;
+    height: 35em;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.border {
+    border: 1px solid white;
+    height: 25em;
+}
+
+.playerSelectionImage {
+    border: 2px dotted white;
+    width: 40%;
+    height: 30em;
+}
+
+.computerSelectionImage {
+    border: 2px dotted white;
+    width: 40%;
+    height: 30em;
+}
+
+.buttonContainer {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 50%;
+    height: 5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+.btn {
+    width: 10em;
+    background-color: rgb(109, 105, 112);
+    color: white;
+    font-size: 2em;
+}
+
+.resultsContainer {
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 43.8%;
+    height: 20em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.scoreContainer {
+    border: 1px solid white;
+    width: 20%;
+    height: 10em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.playResult {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}

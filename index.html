@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <button class="btn rockBtn" value="rock">Rock</button>
-    <button class="btn paperBtn" type="button" value="paper">Paper</button>
-    <button class="btn scissorsBtn" type="button" value="scissors">Scissors</button>
+    <h1>Rock, Paper, Scissors Battle Royale</h1>
+
+    <div class="imagesContainer">
+        <div class="playerSelectionImage"></div>
+        <div class="border"></div>
+        <div class="computerSelectionImage"></div>
+    </div>
+    
+    <div class="buttonContainer">
+        <button class="btn rockBtn" value="rock">Rock</button>
+        <button class="btn paperBtn" type="button" value="paper">Paper</button>
+        <button class="btn scissorsBtn" type="button" value="scissors">Scissors</button>
+    </div>
+    
     <div class="resultsContainer">
-        <p class="playResult"></p>
-        <div class="playerScore">
+        
+        
+        <div class="playerScore scoreContainer">
             <h2>Player Score</h2>
             <p></p>
         </div>
 
-        <div class="computerScore">
+        <div class="computerScore scoreContainer">
             <h2>Computer Score</h2>
             <p></p>
         </div>
 
-    </div>
+        <p class="playResult"></p> 
+
+    </div> 
     <script src="js/index.js"></script>
 </body>
 </html>
