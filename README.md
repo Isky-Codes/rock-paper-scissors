@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors Battle Royale
 
 
-![Screenshot of site](https://isky-codes.github.io/rock-paper-scissors/)
+![Screenshot of site](https://github.com/Isky-Codes/rock-paper-scissors/blob/main/images/screenshot.png)
 
 A repository to hold a basic rock, paper, scissors game to help solidify understanding of basic Javascript and overall programming concepts such as if statements, loops, variables, data types, and DOM manipulation.
 
