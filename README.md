@@ -10,4 +10,4 @@ Tech Used: HTML, CSS, Javascript
 
 # Lessons Learned   
 
-Learned how to manipulate the DOM, add event listeners to buttons and understand interactivity of a website. Solidified understanding of basic programming concepts and their practical uses
+Learned how to manipulate the DOM, add event listeners to buttons and understand interactivity of a website. Solidified understanding of basic programming concepts and their practical usesgi
